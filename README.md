@@ -6,10 +6,10 @@ It is a real-time hand-tracking system which can drive virtual and augmented rea
 
 ## Related Work
 
-- RGB-based approaches <br>
+- ## RGB-based approaches <br>
 Early RGB-based methods follow an analysis-by-synthesis paradigm, fitting a hand model to low level visual cues such as edges, skin color, silhouettes and optical flow. This is extremely challenging given the self-similarity, subtle color variation, and severe self-occlusion exhibited by hands.
 
-- Depth-based approaches <br>
+- ## Depth-based approaches <br>
 Depth sensors have been widely applied to hand-tracking. Model-based approaches can reliably fit a hand mesh to the reconstructed point cloud provided by the depth sensor, but this approach does not generalize to RGB images.
 
 ## Working
