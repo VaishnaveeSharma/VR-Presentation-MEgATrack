@@ -27,7 +27,7 @@ Four VGA, synchronized, global-shutter cameras to drive our hand tracker. Each c
 ## Step 2: Hand detection
 
 The task of hand detection is to find the bounding box of each hand in every input image. A key challenge is to ensure robustness to a variety of real world environments. To tackle this challenge, collected a large and varied hand detection dataset specific to this camera configuration using a semi-automatic labeling method and propose a simple and efficient CNN architecture which we name DetNet.
-### Detection by Tracking
+- ## Detection by Tracking <br>
 In general, it is necessary to run DetNet on all four images to guarantee finding both hands in all views. Since we target mobile architectures, this is too expensive to run at every frame, even for our power-optimized DetNet architecture. To overcome this limitation we employ a detection-by-tracking approach when a tracked hand is available.
 
 ![](images/fig10.PNG)
