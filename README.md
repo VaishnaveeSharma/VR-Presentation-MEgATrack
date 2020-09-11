@@ -12,17 +12,20 @@ Early RGB-based methods follow an analysis-by-synthesis paradigm, fitting a hand
 - ## Depth-based approaches <br>
 Depth sensors have been widely applied to hand-tracking. Model-based approaches can reliably fit a hand mesh to the reconstructed point cloud provided by the depth sensor, but this approach does not generalize to RGB images.
 
+## Data Generation
+In this work, depth tracker has been used to generate ground truth hand poses for training the keypoint estimation network. This model based tracker requires minimal human intervention (2D bounding boxes) if the tracker fails. The system maximizes the quality of the ground truth data without sacrificing mobility. As a result, training set is larger and more diverse in terms of hand shape, pose and background variation than any previously proposed RGB datasets.
+
 ## Working
 
 ![](images/fig3.PNG)
 
 System starts by taking images from four monochrome cameras and detect the left and right hands in each image, producing a set of bounding boxes. Followed by cropping of bounding box from the image and pass it to a network that detects 21 keypoints on the hand. The resulting keypoints are then used to fit a 3D hand pose.
 
-## Step 1: capturing images of hand through the use of four fisheye cameras 
+## Step 1: Capturing images of hand using four fisheye cameras 
 
 ![](images/fig9.JPG)
 
-Four VGA, synchronized, global-shutter cameras to drive our hand tracker. Each camera covers a 150◦ (width), 120◦ (height) and 175◦ (diagonal) FOV.
+Four fisheye cameras are used to drive hand tracker. Each camera covers a 150◦ (width), 120◦ (height) and 175◦ (diagonal) FOV.
 
 ## Step 2: Hand detection
 
@@ -38,9 +41,6 @@ Keypoint estimation network, KeyNet, predicts the 21 keypoints on the hand from 
 
 ![](images/fig5.PNG)
 ![](images/fig6.PNG)
-
-## Data Generation
-In this work, depth tracker has been used to generate ground truth hand poses for training the keypoint estimation network. This model based tracker requires minimal human intervention (2D bounding boxes) if the tracker fails. The system maximizes the quality of the ground truth data without sacrificing mobility. As a result, training set is larger and more diverse in terms of hand shape, pose and background variation than any previously proposed RGB datasets.
 
 ## Applications
 
