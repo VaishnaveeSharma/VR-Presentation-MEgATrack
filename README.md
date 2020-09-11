@@ -41,9 +41,7 @@ Keypoint estimation network, KeyNet, predicts the 21 keypoints on the hand from 
 
 ## Data Generation
 In this work, depth tracker has been used to generate ground truth hand poses for training the keypoint estimation network. This model based tracker requires minimal human intervention (2D bounding boxes) if the tracker fails. The system maximizes the quality of the ground truth data without sacrificing mobility. As a result, training set is larger and more diverse in terms of hand shape, pose and background variation than any previously proposed RGB datasets.
-## Data Generation At Scale
-Since existing RGB hand pose datasets do not generalise well to new environments and camera configuration. Therefore, there was need to find there own datasets for DETNET and KEYNET neural network. The two tasks have different requirements: hand detection requires only that the annotated bounding boxes be accurate, but needs a camera configuration as similar as possible to the target configuration, while keypoint estimation is less sensitive to the camera configuration (since the network sees only a crop) but needs accurate annotation of the entire hand pose. We therefore developed two scalable methods for generating high quality data for training DetNet and KeyNet in real-world scenarios.
-1. Keypoint labels from depth-based hand-tracking 2. Semi-automatic bounding box labeling
+
 ## Applications
 
 In various vedio games. The proposed system will be helpful and improve the user experience.
